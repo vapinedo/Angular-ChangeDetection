@@ -3,14 +3,4 @@
 </h2>
 <hr>
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    <div *ngFor="let user of userList" class="col">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">{{user.name}}</h5>
-                <p class="card-text">{{user.email}}</p>
-                <p class="card-text">{{user.phone}}</p>
-            </div>
-        </div>
-    </div>
-</div>
+<app-user-card [userList]="userList" ></app-user-card>
