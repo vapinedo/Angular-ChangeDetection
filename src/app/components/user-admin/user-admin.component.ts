@@ -16,7 +16,6 @@ export class UserAdminComponent implements OnInit {
     const getUsers = async() => {
       try {
         const users = await this.userSvc.getAll();
-        console.log(users)
         this.userList = users;
       } catch (error) {
         console.log("Error", error);
@@ -25,5 +24,7 @@ export class UserAdminComponent implements OnInit {
     getUsers();
   }
 
-
+  removeFirstUser() {
+    this.userList.splice(0, 1);
+  }
 }
