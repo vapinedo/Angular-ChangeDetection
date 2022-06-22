@@ -25,6 +25,8 @@ export class UserAdminComponent implements OnInit {
   }
 
   removeFirstUser() {
-    this.userList.splice(0, 1);
+    const newUserList = [...this.userList];
+    newUserList.splice(0, 1);
+    this.userList = newUserList;
   }
 }
