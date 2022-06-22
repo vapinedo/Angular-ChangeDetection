@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from 'src/app/services/users.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss']
+  selector: 'app-user-admin',
+  templateUrl: './user-admin.component.html',
+  styleUrls: ['./user-admin.component.scss']
 })
-export class UsersComponent implements OnInit {
+export class UserAdminComponent implements OnInit {
 
   userList: any[] = [];
 
-  constructor(private userSvc: UsersService) { }
+  constructor(private userSvc: UserService) { }
 
   ngOnInit(): void {
     const getUsers = async() => {
